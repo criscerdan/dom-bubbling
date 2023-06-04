@@ -1,16 +1,15 @@
 function main(){
     const cuadrado=document.querySelector(".cuadrado-rojo");
-    
-    document.addEventListener("keydown", function(e){
+    document.addEventListener("keydown",function(evento){
         const marginLeftText=cuadrado.style.marginLeft.replace("px","");
-        const marginLeft=parseInt(marginLeftText || "0"); 
+        const marginLeft=parseInt(marginLeftText || "0");
         let newMarginLeft=marginLeft;
-        if(e.code =="ArrowLeft"){
+        if(evento.code=="ArrowLeft"){
             newMarginLeft--;
-        }else if(e.code =="ArrowRight"){
+        }else if(evento.code=="ArrowRight"){
             newMarginLeft++;
         }
-        cuadrado.style.marginLeft= newMarginLeft +"px"
+        cuadrado.style.marginLeft=newMarginLeft+"px";
     })
 }
 
